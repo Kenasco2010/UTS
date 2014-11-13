@@ -1,0 +1,16 @@
+<h1>Listing of Bills</h1>
+<%= link_to 'New Bill', new_bill_path %>
+ 
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+  </tr>
+ 
+  <% @bills.reverse_each do |bill| %>
+    <tr>
+      <td><%= bill.name %></td>
+      <td><%= bill.description %></td>
+    </tr>
+  <% end %>
+</table>
