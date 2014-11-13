@@ -1,0 +1,62 @@
+.input {
+    border: 1px solid #c4c4c4; 
+    height: 30px; 
+    width: 250px; 
+	padding:4px;
+    border-radius:4px;
+	-webkit-border-radius:4px;
+    -moz-border-radius:4px;
+    box-shadow:0px 0px 8px #d9d9d9;
+	-moz-box-shadow:0px 0px 8px #d9d9d9;
+	-webkit-box-shadow:0px 0px 8px #d9d9d9;
+	} 
+	
+.input:focus { 
+    border: 1px solid #7bc1f7; 
+	}
+
+	/* navbar */
+.navbar-default {
+    background-color: #141b22;
+    border-color: #E7E7E7;
+}
+/* title */
+.navbar-default .navbar-brand {
+    color: #777;
+}
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+    color: #5E5E5E;
+}
+/* link */
+.navbar-default .navbar-nav > li > a {
+    color: #777;
+}
+footer {
+    position: fixed;
+    height: 100px;
+    bottom: 0;
+    width: 100%;
+}
+
+.btn-build {
+text-align: center;
+background-color: #50a712;
+width: 543px;
+height: 80px;
+padding-top: 20px;
+-moz-box-shadow: 1px 2px #5e5d5d;
+-webkit-box-shadow: 1px 2px #5e5d5d;
+box-shadow: 1px 2px #5e5d5d;
+}
+
+.wrapper {
+    text-align: center;
+    margin-top: 210px;
+    margin-right: -200px;
+}
+
+.button {
+    position: absolute:
+    top: 50%;
+}
