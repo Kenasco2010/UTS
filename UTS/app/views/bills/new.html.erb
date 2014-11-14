@@ -1,20 +1,4 @@
-<div class="container"> 
-<%= form_for :bill, url: bills_path do |f| %>
-
-<p>
-<%= f.label :name %><br>
-<%= f.text_field :name %>
-</p>
-
-<p>
-<%= f.label :description %><br>
-<%= f.text_field :description %>
-</p>
-
-<p>
-<%= f.submit%>
-</p>
-
-<% end %>
+ 
+<h1>New Bill</h1>
+<%=render 'form' %>
 <%= link_to 'Back', bills_path %>
-</div>

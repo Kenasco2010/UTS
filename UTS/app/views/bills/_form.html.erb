@@ -1,0 +1,27 @@
+<%= form_for :bill, url: bills_path do |f| %>
+<% if @bill.errors.any? %>
+<div id="error_explanation">
+  <h2><%= pluralize(@bill.errors.count, "error") %> prohibited
+    this bill from being saved:</h2>
+    <ul>
+      <% @bill.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+  <% end %>
+  <p>
+    <%= f.label :name %><br>
+    <%= f.text_field :name,  class: 'form-control', autofocus: true, :placeholder => "Bill Name" %>
+  </p>
+
+  <p>
+    <%= f.label :description %><br>
+    <%= f.text_field :description,  class: 'form-control', autofocus: true, :placeholder => "Description of Bill" %>
+  </p>
+
+  <p>
+    <%= f.submit%>
+  </p>
+
+  <% end %>
