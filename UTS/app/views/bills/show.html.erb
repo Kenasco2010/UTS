@@ -1,13 +1,21 @@
-<div class="jumbotron">
+<div class="container">
 	<p>
-		<strong> Name:</strong>
+		<strong> Name of Bill:</strong>
 		<%= @bill.name %>
 	</p>
 
 	<p>
-		<strong> Description:</strong>
+		<strong> Description of Bill:</strong>
 		<%= @bill.description %>
 	</p>
 
-	<%= link_to 'Back', bills_path %>
+	<h2>Company to pay Bill to:</h2>
+	<%= render @bill.companies %>
+
+
+	<h2>Add a company:</h2>
+	<%= render "companies/form" %>
+
+	<%= link_to 'Back', bills_path %> |
+	<%= link_to 'Edit', edit_bill_path(@bill) %>
 </div>

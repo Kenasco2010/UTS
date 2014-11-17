@@ -10,6 +10,7 @@
     </ul>
   </div>
   <% end %>
+
   <p>
     <%= f.label :name %><br>
     <%= f.text_field :name,  class: 'form-control', autofocus: true, :placeholder => "Bill Name" %>
@@ -17,7 +18,7 @@
 
   <p>
     <%= f.label :description %><br>
-    <%= f.text_field :description,  class: 'form-control', autofocus: true, :placeholder => "Description of Bill", :maxlength=>"300" %>
+    <%= f.text_field :description,  class: 'form-control',  autofocus: true, :placeholder => "Description of Bill", :maxlength=>"300" %>
   </p>
 
   <p>

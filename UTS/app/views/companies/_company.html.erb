@@ -1,0 +1,21 @@
+<p>
+	<strong>Name:</strong>
+	<%= company.name %>
+</p>
+<p>
+	<strong>Address:</strong>
+	<%= company.address %>
+</p>
+<p>
+	<strong>Contact:</strong>
+	<%= company.contact %>
+</p>
+<p>
+	<strong>Logo:</strong>
+	<%= company.logo %>
+</p>
+<p>
+	<%= link_to 'Destroy Comment', [company.bill, company],
+	method: :delete,
+	data: { confirm: 'Are you sure?' } %>
+</p>

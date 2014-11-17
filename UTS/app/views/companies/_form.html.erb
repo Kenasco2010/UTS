@@ -1,0 +1,21 @@
+<%= form_for([@bill, @bill.companies.build]) do |f| %>
+<p>
+	<%= f.label :name %><br>
+	<%= f.text_field :name,  class: 'form-control', autofocus: true, :placeholder => "Company Name" %>
+</p>
+<p>
+	<%= f.label :address %><br>
+	<%= f.text_area :address, class: 'form-control', autofocus: true, :placeholder => "Company Address"%>
+</p>
+<p>
+	<%= f.label :contact %><br>
+	<%= f.text_field :contact, class: 'form-control', autofocus: true, :placeholder => "Company Contact" %>
+</p>
+<p>
+	<%= f.label :logo %><br>
+	<%= f.text_field :logo %>
+</p>
+<p>
+	<%= f.submit %>
+</p>
+<% end %>

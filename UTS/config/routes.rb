@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  resources :bills
+  resources :bills do
+    resources :companies
+  end
   
 
   get 'welcome/home'

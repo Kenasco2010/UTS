@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141112091735) do
+ActiveRecord::Schema.define(version: 20141114135939) do
 
   create_table "bills", force: true do |t|
     t.string   "name"
@@ -19,5 +19,17 @@ ActiveRecord::Schema.define(version: 20141112091735) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "companies", force: true do |t|
+    t.string   "name"
+    t.text     "address"
+    t.integer  "contact"
+    t.string   "logo"
+    t.integer  "bill_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "companies", ["bill_id"], name: "index_companies_on_bill_id"
 
 end
