@@ -26,11 +26,14 @@ class BillsController < ApplicationController
 			render 'edit'
 		end
 	end
-
+	def payment
+		@bill = Bill.find(params[:id])
+	end
 	def edit
 		@bill = Bill.find(params[:id])
 	end
-
+	
+	
 	def show
 		@bill = Bill.find(params[:id])
 	end
@@ -45,5 +48,5 @@ end
 private
 def bill_params
 	params.require(:bill).permit(:name, :description)
-	
 end
+

@@ -1,7 +1,8 @@
-.new_bill input, .new_company input, .new_company textarea  {
+.new_bill input, .new_company input, .new_company textarea, .new_payment input, .new_payment textarea {
     border: 1px solid #c4c4c4; 
     height: 30px; 
-    width: 250px; 
+    width: 250px;
+    /*text-shadow:5px 5px 5px #cfcfcf; */ 
     padding:4px;
     border-radius:4px;
     -webkit-border-radius:4px;
@@ -11,6 +12,19 @@
     -webkit-box-shadow:0px 0px 8px #d9d9d9;
 } 
 
+.paymentinput input, .paymentinput textarea {
+    border: 1px solid #c4c4c4; 
+    height: 30px; 
+    width: 400px; 
+    padding:4px;
+    /*text-shadow:5px 5px 5px #cfcfcf; */
+    border-radius:4px;
+    -webkit-border-radius:4px;
+    -moz-border-radius:4px;
+    box-shadow:0px 0px 8px #d9d9d9;
+    -moz-box-shadow:0px 0px 8px #d9d9d9;
+    -webkit-box-shadow:0px 0px 8px #d9d9d9;
+} 
 .input:focus { 
     border: 1px solid #7bc1f7; 
 }
@@ -19,6 +33,7 @@
 .navbar-default {
     background-color: #141b22;
     border-color: #E7E7E7;
+
 }
 /* title */
 .navbar-default .navbar-brand {
@@ -31,22 +46,35 @@
 /* link */
 .navbar-default .navbar-nav > li > a {
     color: white;
+
 }
+
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus {
+  color: white;
+  text-decoration: none;
+  background-color: #0EBF17;
+}
+
+.dropdown-menu > .active > a,
+.dropdown-menu > .active > a:hover,
+.dropdown-menu > .active > a:focus {
+  color: #fff;
+  text-decoration: none;
+  background-color: #0EBF17;
+  outline: 0;
+}
+.dropdown-menu > .disabled > a,
+.dropdown-menu > .disabled > a:hover,
+.dropdown-menu > .disabled > a:focus {
+  color: #0EBF17;
+}
+
 
 .scolor-white{
 	color: white;
 }
 
-/*.expanded-footer footer {
--moz-box-sizing: border-box;
-box-sizing: border-box;
-position: static;
-height: 185px;
-padding: 15px 0 20px;
-border: 0;
-border-top: 1px solid #181818;
-}
-*/
 footer {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -75,13 +103,4 @@ footer {
     box-shadow: 1px 2px #5e5d5d;
 }
 
-.wrapper {
-    text-align: center;
-    margin-top: 210px;
-    margin-right: -200px;
-}
 
-.button {
-    position: absolute:
-    top: 50%;
-}

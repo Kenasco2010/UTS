@@ -11,6 +11,7 @@ class CompaniesController < ApplicationController
 		@company.destroy
 		redirect_to bill_path(@bill)
 	end
+	
 	private
 	def company_params
 		params.require(:company).permit(:name, :address, :contact, :logo)

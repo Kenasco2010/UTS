@@ -1,0 +1,48 @@
+<%= form_for ([@bill, @bill.payments.build]) do |f| %>
+<div class="container paymentinput well sidebar-nav">
+  <div class="col-md-5">
+
+    <p>
+      <%= f.label :bill_status %><br>
+      <%= f.text_field :bill_status,  class: 'form-control', autofocus: true, :placeholder => "Bill Status" %>
+    </p>
+    <p>
+      <%= f.label :amount_due %><br>
+      <%= f.text_field :amount_due, class: 'form-control', autofocus: true, :placeholder => "Amount Due" %>
+    </p>
+    <p>
+      <%= f.label :amount_paid %><br>
+      <%= f.text_field :amount_paid, class: 'form-control', autofocus: true, :placeholder => "Amount Paid" %>
+    </p>
+    <p>
+      <%= f.label :balance %><br>
+      <%= f.text_field :balance, class: 'form-control', autofocus: true, :placeholder => "Balance" %>
+    </p>
+
+  </div>
+  <div class="col-md-5">
+
+    <p>
+      <%= f.label :date_of_payment %><br>
+      <%= f.date_select :date_of_payment, class: 'form-control', autofocus: true, :placeholder => "Date of Payment" %>
+    </p>
+    <p>
+      <%= f.label :next_payment_date %><br>
+      <%= f.date_select :next_payment_date, class: 'form-control', autofocus: true, :placeholder => "Next Payment Date" %>
+    </p>
+    <p>
+      <%= f.label :comment %><br>
+      <%= f.text_field :comment, class: 'form-control', autofocus: true, :placeholder => "Comment" %>
+    </p>
+    <p>
+      <%= f.label :paid_by %><br>
+      <%= f.text_field :paid_by, class: 'form-control', autofocus: true, :placeholder => "Paid By" %>
+    </p>
+  </div>
+  
+</div>
+<p>
+  <%= f.submit class: "btn btn-defalt btn-primary"%>
+</p>
+
+<% end %>

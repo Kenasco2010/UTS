@@ -1,10 +1,14 @@
 Rails.application.routes.draw do
   resources :bills do
     resources :companies
+    resources :payments
   end
   
-
-  get 'welcome/home'
+  #match ':controller(/:action(/:id))', :via => [:get, :post]
+  
+  # get 'bills/newpayment/:id' => 'payments#payment', as: :new_payment
+  get 'welcome/login'
+  get '/newpayment(/:id)' => 'bills#payment', as: :new_payment
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

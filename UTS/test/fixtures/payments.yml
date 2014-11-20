@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  bill_status: MyString
+  amount_due: 9.99
+  amount_paid: 9.99
+  balance: 9.99
+  date_of_payment: 2014-11-17
+  next_payment_date: 2014-11-17
+  comment: MyText
+  paid_by: MyString
+  bill_id: 
+
+two:
+  bill_status: MyString
+  amount_due: 9.99
+  amount_paid: 9.99
+  balance: 9.99
+  date_of_payment: 2014-11-17
+  next_payment_date: 2014-11-17
+  comment: MyText
+  paid_by: MyString
+  bill_id: 

@@ -1,0 +1,21 @@
+<div class="container">
+	<p>
+		<strong> Name of Bill:</strong>
+		<%= @bill.name %>
+	</p>
+
+	<p>
+		<strong> Description of Bill:</strong>
+		<%= @bill.description %>
+	</p>
+
+	<h2>Company to pay Bill to:</h2>
+	<%= render @bill.companies %>
+
+
+	
+	
+
+	<%= link_to 'Back', bills_path %> |
+	<%= link_to 'Edit', edit_bill_path(@bill) %>
+</div>

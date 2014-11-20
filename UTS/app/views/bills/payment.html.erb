@@ -1,0 +1,32 @@
+<div class="container">
+	<div class="col-md-6">
+		<div class="well sidebar-nav">
+
+			<p>
+				<strong> Name of Bill:</strong>
+				<%= @bill.name %>
+			</p>
+
+			<p>
+				<strong> Description of Bill:</strong>
+				<%= @bill.description %>
+			</p>
+		</div>
+	</div>
+
+	<div class="col-md-6">
+		<div class="well sidebar-nav">
+			<h2>Company to pay Bill to:</h2>
+			<%= render @bill.companies %>
+
+		</div>
+	</div>
+</div>
+
+<div class="container">
+	<h2>Make Payments:</h2>
+	<%= render "payments/form" %>
+
+	<%= link_to 'Back', bills_path %> |
+	<%= link_to 'Edit', edit_bill_path(@bill) %>
+</div>
