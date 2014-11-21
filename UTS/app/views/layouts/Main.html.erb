@@ -38,7 +38,7 @@
     </head>
     <body>
 
-      <div class="navbar navbar-default navbar-static-top">
+      <nav class="navbar navbar-default navbar-static-top">
         <a href="#" title="" rel="home" class="navbar-brand">
           <%= image_tag 'icon.png', {class: "", id: ""} %></a>
           <div class="container">
@@ -89,28 +89,29 @@
             </div>
           </div>
         </div>
+      </nav>
+      
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-9">
+            <%= bootstrap_flash %>
 
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-9">
-              <%= bootstrap_flash %>
+            <%= yield %>
 
-              <%= yield %>
-
-            </div>
+          </div>
 
 
-            <footer class="footer">
-              <p>&copy; iKenStudio 2014</p>
-            </footer>
+          <footer class="footer">
+            <p>&copy; iKenStudio 2014</p>
+          </footer>
 
-          </div> <!-- /container -->
-          <% if @popup_message %>
-          <script language="JavaScript">
-           alert("<%= @popup_message %>");
-         </script>
-         <% end %>
-       </body>
-       </html>
+        </div> <!-- /container -->
+        <% if @popup_message %>
+        <script language="JavaScript">
+         alert("<%= @popup_message %>");
+       </script>
+       <% end %>
+     </body>
+     </html>
 
 
