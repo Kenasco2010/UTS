@@ -1,4 +1,8 @@
 <p>
+	<strong>Logo:</strong>
+	<%= link_to (image_tag company.logo.url(:medium), class: 'logo'), [company.bill, company] %>
+</p>
+<p>
 	<strong>Name:</strong>
 	<%= company.name %>
 </p>
@@ -10,12 +14,9 @@
 	<strong>Contact:</strong>
 	<%= company.contact %>
 </p>
+
 <p>
-	<strong>Logo:</strong>
-	<%= company.logo %>
-</p>
-<p>
-	<%= link_to 'Destroy Comment', [company.bill, company],
+	<%= link_to 'Destroy Company', [company.bill, company],
 	method: :delete,
-	data: { confirm: 'Are you sure?' } %>
+	data: { confirm: 'Are you sure you want to delete?' } %>
 </p>
