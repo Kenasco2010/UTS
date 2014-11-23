@@ -1,4 +1,5 @@
-<h1>List of Payments</h1>
+
+
 <div  class="myback">
 
 	<table>
@@ -13,7 +14,7 @@
 			<th>Paid By</th>
 		</tr>
 
-		<% @payment.reverse_each do |payment| %>
+		<% @bill.payments.each do |payment|  %>
 		<tr>
 			<td><%= payment.bill_status%></td>
 			<td><%= payment.amount_due %></td>
@@ -26,6 +27,4 @@
 		</tr>
 		<% end %>
 	</table>
-	<%= paginate @payments %>
-	<%= page_entries_info @payments %>
 </div>

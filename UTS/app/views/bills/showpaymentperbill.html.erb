@@ -1,8 +1,3 @@
-
-
-<%= link_to 'Back', bills_path %> |
-<%= link_to 'Edit', edit_bill_path(@bill) %>
-
 <div class="container">
 	<div class="col-md-6">
 		<div class="panel panel-primary border">
@@ -30,18 +25,37 @@
 
 			</div>
 			<div class="panel-body">
+
+
+				<% @bill.companies.each do |company|  %>
+				<p>
+					<strong>Logo:</strong>
+
+					<%= link_to (image_tag company.logo.url(:medium), class: 'logo', :size => "70x70"), [company.bill, company] %>
+				</p>
+				<p>
+					<strong>Name:</strong>
+					<%= company.name %>
+				</p>
+				<p>
+					<strong>Address:</strong>
+					<%= company.address %>
+				</p>
+				<p>
+					<strong>Contact:</strong>
+					<%= company.contact %>
+				</p>
+				<% end %>
+<!-- 
 				<p>
 					<%= render @bill.companies %>
-				</p>
+				</p> -->
 			</div>
 		</div>	
 	</div>
 </div>
+<hr>
 <div class="container">
-	
-	<h3>Add a company:</h3>
-	<%= render "companies/form" %>
-
-	<%= link_to 'Back', bills_path %> |
-	<%= link_to 'Edit', edit_bill_path(@bill) %>
+	<h4>List of Payments For: <%= @bill.name %></h4>
+	<%= render "payments/showpaymentperbill" %>
 </div>

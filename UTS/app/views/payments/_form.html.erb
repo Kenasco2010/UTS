@@ -4,7 +4,7 @@
 
     <p>
       <%= f.label :bill_status %><br>
-      <%= f.text_field :bill_status,  class: 'form-control', autofocus: true, :placeholder => "Bill Status" %>
+      <%= f.select :bill_status, [["***Select***"], ["Paid"], ["Not Paid"]], class: 'form-control', autofocus: true, :placeholder => "Bill Status" %>
     </p>
     <p>
       <%= f.label :amount_due %><br>

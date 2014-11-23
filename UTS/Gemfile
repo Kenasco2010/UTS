@@ -13,6 +13,8 @@ gem 'twitter-bootstrap-rails'
 gem 'therubyracer'
 gem 'paperclip', '~> 4.2.0'
 gem 'rmagick'
+gem 'kaminari', '~> 0.16.1'
+# gem 'will_paginate'
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '~> 4.0.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes

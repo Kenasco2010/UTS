@@ -1,4 +1,7 @@
-<%= form_for(@bill)  do |f| %>
+
+
+
+<%= form_for @bill, html: {class: "form-horizontal", role: "form"}  do |f| %>
 <% if @bill.errors.any? %>
 <div id="error_explanation">
   <h2><%= pluralize(@bill.errors.count, "error") %> prohibited
@@ -11,18 +14,23 @@
   </div>
   <% end %>
 
-  <p>
-    <%= f.label :name %><br>
-    <%= f.text_field :name,  class: 'form-control', autofocus: true, :placeholder => "Bill Name" %>
-  </p>
+  <div class="form-group">
+    <%= f.label :name, class: "col-lg-4 control-label"%>
+    <div class="col-lg-4">
+      <%= f.text_field :name,  class: 'form-control', autofocus: true, :placeholder => "Bill Name" %>
+    </div>
+  </div>
 
-  <p>
-    <%= f.label :description %><br>
-    <%= f.text_area :description,  class: 'form-control',  autofocus: true, :placeholder => "Description of Bill", :maxlength=>"300" %>
-  </p>
+  <div class="form-group">
 
-  <p>
-    <%= f.submit%>
-  </p>
-
+    <%= f.label :description, class: "col-lg-4 control-label" %>
+    <div class="col-lg-4">
+      <%= f.text_area :description,  class: 'form-control',  autofocus: true, :placeholder => "Description of Bill", :maxlength=>"300"%>
+    </div>
+  </div>
+  <div class="text-center">
+    <%= f.submit class: "btn btn-defalt btn-color"%>
+  </div>
   <% end %>
+
+

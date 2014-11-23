@@ -7,8 +7,12 @@ Rails.application.routes.draw do
   #match ':controller(/:action(/:id))', :via => [:get, :post]
   
   # get 'bills/newpayment/:id' => 'payments#payment', as: :new_payment
-  get 'welcome/login'
+  get 'welcome/login' 
+  # => 'welcome#login', as: :login
   get '/newpayment(/:id)' => 'bills#payment', as: :new_payment
+  get '/viewpayment(/:id)' => 'bills#showpaymentperbill', as: :bills_payment
+  # get '/listpayments(/:id)' => 'payments#index', as: :bill_payments
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

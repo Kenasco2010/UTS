@@ -2,6 +2,8 @@ class BillsController < ApplicationController
 	layout 'Main'
 	def index
 		@bill = Bill.all
+		@bills = Bill. page(params[:page]).per(2)
+		# @bills = Bill.paginate(:page => params[:page], :per_page => 2)
 	end
 	def new
 		@bill = Bill.new
@@ -20,7 +22,7 @@ class BillsController < ApplicationController
 		@bill = Bill.find(params[:id])
 
 		if @bill.update(bill_params)
-			flash[:notice] = 'Profile was successfully updated.'
+			flash[:notice] = 'Bill was successfully updated.'
 			redirect_to @bill
 		else
 			render 'edit'
@@ -36,6 +38,10 @@ class BillsController < ApplicationController
 	
 	def show
 		@bill = Bill.find(params[:id])
+	end
+	def showpaymentperbill
+		@bill = Bill.find(params[:id])
+		# @payment = payment.find(params[:id])
 	end
 	def destroy
 		@bill = Bill.find(params[:id])
