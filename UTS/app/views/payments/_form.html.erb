@@ -8,11 +8,11 @@
     </p>
     <p>
       <%= f.label :amount_due %><br>
-      <%= f.text_field :amount_due, class: 'form-control', autofocus: true, :placeholder => "Amount Due" %>
+      <%= f.text_field :amount_due, { "onkeypress"=>"return isNumber(event)", class: 'form-control', autofocus: true, :placeholder => "Amount Due" } %>
     </p>
     <p>
       <%= f.label :amount_paid %><br>
-      <%= f.text_field :amount_paid, class: 'form-control', autofocus: true, :placeholder => "Amount Paid" %>
+      <%= f.text_field :amount_paid, { "onkeypress"=>"return isNumber(event)", class: 'form-control', autofocus: true, :placeholder => "Amount Paid"} %>
     </p>
     <p>
       <%= f.label :balance %><br>
@@ -46,3 +46,32 @@
 </p>
 
 <% end %>
+
+<!-- This section of the code is javascript. what it does is to calculate the amound paid from the amount due on the form and give the aswers as the balance. the balance automatically appears as = the input is made on the amount paid and amount due textbox -->
+
+<script type="text/javascript">
+  calculate = function(){
+   var a = $("#payment_amount_due");
+   var b = $("#payment_amount_paid");
+ // var c = $('#expenditure_utility_bills');
+
+ if(a.val() == '' || b.val()==''){
+   return;
+ }
+
+ var balance = parseFloat(a.val()) - parseFloat(b.val());
+ $("#payment_balance").val(balance);
+};
+$("#payment_amount_due").on("change", calculate);
+$("#payment_amount_paid").on("change", calculate);
+// $("#expenditure_utility_bills").on("change", calculate);
+
+function isNumber(evt) {
+ evt = (evt) ? evt : window.event;
+ var charCode = (evt.which) ? evt.which : evt.keyCode;
+ if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+   return false;
+ }
+ return true;
+}
+</script>

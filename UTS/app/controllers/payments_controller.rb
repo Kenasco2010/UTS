@@ -10,7 +10,7 @@ class PaymentsController < ApplicationController
 	end
 	def index
 		#This code is for the pagination
-		@payments = Payment.page(params[:page]).per(3)
+		@payment = Payment.page(params[:page]).per(3)
 		@payment = Payment.all
 	end
 	def payment
@@ -24,12 +24,11 @@ class PaymentsController < ApplicationController
 	end
 
 	# def index
-	# 	@bill = Bill.find(2)
-
+	# 	# @bill = Bill.find(2)
 	# end
-	# def show
-	# 	@bill = Bill.find(params[:id])
-	# end
+	def show
+		@bill = Bill.find(params[:id])
+	end
 	def destroy
 
 	end
