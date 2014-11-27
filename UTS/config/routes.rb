@@ -3,13 +3,21 @@ Rails.application.routes.draw do
     resources :companies
     resources :payments
   end
-  
+  #This section of the code creates a new resources for the payment view and links it to the index
+  get "payments" => "payments#index"
   #match ':controller(/:action(/:id))', :via => [:get, :post]
   
   # get 'bills/newpayment/:id' => 'payments#payment', as: :new_payment
+
+  #This section of the code creates a new resources for the welcome view and links it to the login page
   get 'welcome/login' 
   # => 'welcome#login', as: :login
-  get '/newpayment(/:id)' => 'bills#payment', as: :new_payment
+
+#This section of the code makes it possible to load a new form based on the id of the bill 
+#selected
+get '/newpayment(/:id)' => 'bills#payment', as: :new_payment
+
+  #This section of the codes makes it possbile to view a payment made per bill.
   get '/viewpayment(/:id)' => 'bills#showpaymentperbill', as: :bills_payment
   # get '/listpayments(/:id)' => 'payments#index', as: :bill_payments
 

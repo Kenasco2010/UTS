@@ -133,6 +133,15 @@ footer {
     color: #fff;
     background-color: #18AE2A;
     border-color: #18AE2A;
+    margin-left: 450px;
+    /*margin-top:200px;*/
+}
+.btn-landing {
+    color: #fff;
+    background-color: #18AE2A;
+    border-color: #18AE2A;
+    margin-left: 450px;
+    margin-top:200px;
 }
 .btn-color:hover
 {
@@ -148,6 +157,11 @@ tbody tr:nth-child(2n) {
     width:10px;
     height: 10px;
 }
+.jumbotron{
+    height: 500px;
+    background-image: url(jumbotron.jpg);
+    /*width:100%;*/
+}
 
 .formcenter{
     width:300px;
@@ -155,7 +169,8 @@ tbody tr:nth-child(2n) {
     text-align:center; 
     /*border-right:1px solid #dfdfdf;*/ 
     margin-left:350px;
-/*}
+}
+/*
 .container {
     width: 1500px;
     }*/

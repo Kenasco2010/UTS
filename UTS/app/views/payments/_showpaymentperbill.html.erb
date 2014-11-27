@@ -14,12 +14,12 @@
 			<th>Paid By</th>
 		</tr>
 
-		<% @bill.payments.each do |payment|  %>
+		<% @bill.payments.reverse_each do |payment|  %>
 		<tr>
 			<td><%= payment.bill_status%></td>
-			<td><%= payment.amount_due %></td>
-			<td><%= payment.amount_paid %></td>
-			<td><%= payment.balance %></td>
+			<td>GH₵<%= payment.amount_due %></td>
+			<td>GH₵<%= payment.amount_paid %></td>
+			<td>GH₵<%= payment.balance %></td>
 			<td><%= payment.date_of_payment %></td>
 			<td><%= payment.next_payment_date %></td>
 			<td><%= payment.comment %></td>
@@ -27,4 +27,5 @@
 		</tr>
 		<% end %>
 	</table>
+	
 </div>

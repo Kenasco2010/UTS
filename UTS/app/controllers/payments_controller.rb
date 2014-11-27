@@ -6,12 +6,13 @@ class PaymentsController < ApplicationController
 	def create
 		@bill = Bill.find(params[:bill_id])
 		@payments = @bill.payments.create(payment_params)
-		redirect_to bill_payments_path(@bill)
+		redirect_to payments_path(@bill)
 	end
 	def index
+		@payments = Payment.all
 		#This code is for the pagination
-		@payment = Payment.page(params[:page]).per(3)
-		@payment = Payment.all
+		@payments = Payment.page(params[:page]).per(5)
+		# @payment = Payment.all
 	end
 	def payment
 
@@ -27,6 +28,7 @@ class PaymentsController < ApplicationController
 	# 	# @bill = Bill.find(2)
 	# end
 	def show
+
 		@bill = Bill.find(params[:id])
 	end
 	def destroy

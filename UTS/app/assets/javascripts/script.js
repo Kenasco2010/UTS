@@ -2,8 +2,8 @@ $(document).ready(function() {//Start when document will ready.
 	$( "#login_button" ).click(function() {
 		// var email = $("#email").val();// Store email input value in the variable email.
 		// var password = $("#password").val();//Store password input value in the variable password.
-		
-		/*Check if email=formget@gmail.com and password=fugo then,Show the message Account Validated!!! in the div having id message.*/
+
+		// Check if email=formget@gmail.com and password=fugo then,Show the message Account Validated!!! in the div having id message.
 		if (email == "formget@gmail.com" && password == "fugo") {
 			$("#message").html("Account Validated!!!");
 		}
@@ -13,6 +13,6 @@ $(document).ready(function() {//Start when document will ready.
 			$("#message").html('***Invalid email or password***');
 
 		}
-		
+
 	});
 });

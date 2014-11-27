@@ -2,7 +2,7 @@
 	<div class="col-md-6">
 		<div class="panel panel-primary border">
 			<div class="panel-heading panel-green">
-				<p>BILL</p>
+				<h4>BILL</h4>
 			</div>
 			<div class="panel-body">
 				<p>
@@ -21,7 +21,7 @@
 	<div class="col-md-6">
 		<div class="panel panel-primary border">
 			<div class="panel-heading panel-green">
-				<h2>Company to pay Bill to:</h2>
+				<h4>Company to pay Bill to:</h4>
 			</div>
 			<div class="panel-body">
 				
@@ -53,7 +53,7 @@
 </div>
 
 <div class="container">
-	<h2>Make Payments:</h2>
+	<h3><u>Make Payments for: <%= @bill.name %></u></h3>
 	<%= render "payments/form" %>
 
 	<%= link_to 'Back', bills_path %> |
