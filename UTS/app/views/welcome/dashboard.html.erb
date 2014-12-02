@@ -1,0 +1,46 @@
+
+<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
+<h2>Dashboard</h2>
+<p>Good Morning Kennedy!!</p>
+<div class="borders">
+	<div align="center">
+		<div class="col-md-4">
+			<div class="panel panel-info">
+				<div class="panel-heading">
+					<h3>Number of Bills</h3>
+				</div>
+				<div class="panel-body">
+					<div class="round">
+						<h1><%= Bill.all.count%></h1>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-md-4">
+			<div class="panel panel-success">
+				<div class="panel-heading">
+					<h3>Number of Payments</h3>
+				</div>
+				<div class="panel-body">
+					<div class="round">
+						<h1><%=Payment.all.count%></h1>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="panel panel-warning">
+				<div class="panel-heading">
+					<h3>Number of Users</h3>
+				</div>
+				<div class="panel-body">
+					<div class="round">
+						<h1>30</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>	

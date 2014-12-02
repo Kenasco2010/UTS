@@ -51,7 +51,10 @@
             <a class="navbar-brand" href="#"></a>
             <div class="navbar-collapse collapse right-menu navbar-right navbar-responsive-collapse">
               <ul class="nav navbar-nav">
-                <li><%= link_to "Home", welcome_login_path %><span class="sr-only">(current)</span></li>
+                <li><%= link_to "Home", welcome_login_path %></li>
+
+                <li><%= link_to "Login", welcome_login_path %></li>
+                <li><%= link_to "Dashboard", dashboard_path %></li>
                 
 
                 <li class="dropdown">
@@ -73,7 +76,6 @@
                     <li><%= link_to "New Payment", bills_path %></li>
                     <li><%= link_to "List of Payments", payments_path %></li>
                     <li><%= link_to "View payment per bill", bills_path %></li>
-
                   </ul>
                 </li>
                 
@@ -96,25 +98,25 @@
       
       <div class="container">
         <div class="row">
-          <div class="col-lg-9">
-            <%= bootstrap_flash %>
+          <!-- <div class="col-lg-9"> -->
+          <%= bootstrap_flash %>
 
-            <%= yield %>
+          <%= yield %>
 
-          </div>
+        </div>
 
+      </div>
+      <footer class="footer">
+        <p>&copy; iKenStudio 2014</p>
+      </footer>
 
-          <footer class="footer">
-            <p>&copy; iKenStudio 2014</p>
-          </footer>
-
-        </div> <!-- /container -->
-        <% if @popup_message %>
-        <script language="JavaScript">
-         alert("<%= @popup_message %>");
-       </script>
-       <% end %>
-     </body>
-     </html>
+    </div> <!-- /container -->
+    <% if @popup_message %>
+    <script language="JavaScript">
+     alert("<%= @popup_message %>");
+   </script>
+   <% end %>
+ </body>
+ </html>
 
 

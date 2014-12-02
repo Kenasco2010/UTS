@@ -1,0 +1,26 @@
+.round {
+    border:solid 0px;
+    color: #333333;
+    font-family: open sans;
+    font-size: 13px;
+    letter-spacing: 0.35px;
+    line-height: 18px;
+    padding: 15px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #678E0C;
+    box-shadow:0px 0px 8px #123456;
+}
+
+h1{
+    text-align: center;
+    color: white;
+    padding:inherit;
+}
+
+.center {
+    width: 400px;
+    margin-bottom: 400px;
+
+}

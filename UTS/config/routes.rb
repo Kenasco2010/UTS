@@ -10,7 +10,8 @@ Rails.application.routes.draw do
   # get 'bills/newpayment/:id' => 'payments#payment', as: :new_payment
 
   #This section of the code creates a new resources for the welcome view and links it to the login page
-  get 'welcome/login' 
+  get 'welcome/login'
+  get "dashboard" => "welcome#dashboard"
   # => 'welcome#login', as: :login
 
 #This section of the code makes it possible to load a new form based on the id of the bill 

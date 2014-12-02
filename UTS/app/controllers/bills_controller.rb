@@ -44,6 +44,7 @@ class BillsController < ApplicationController
 		# @bill = Bill.page(params[:page]).per(2)
 		#This section  of the code displays all the lists of bills
 		# @payment = Payments.find(params[:bill_id])
+		# @payment = Bill.page(params[:page]).per(1)
 	end
 	def destroy
 		@bill = Bill.find(params[:id])

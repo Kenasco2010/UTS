@@ -55,7 +55,9 @@
 	</div>
 </div>
 <hr>
-<div class="container">
-	<h4><u>List of Payments For: <%= @bill.name %></u></h4>
+<div class="panel panel-success">
+	<div class="panel-heading">
+		<h4><u>List of Payments For: <%= @bill.name %></u></h4>
+	</div>
 	<%= render "payments/showpaymentperbill" %>
 </div>
